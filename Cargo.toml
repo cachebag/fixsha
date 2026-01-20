@@ -1,5 +1,5 @@
 [package]
-name = "fns"
+name = "fixsha"
 version = "0.1.0"
 edition = "2024"
 authors = ["Akrm Al-Hakimi <alhakimiakrmj@gmail.com>"]
@@ -12,8 +12,11 @@ keywords = ["nix", "cargo", "hash", "automation", "derivation"]
 categories = ["development-tools", "command-line-utilities"]
 
 [[bin]]
-name = "hook"
+name = "fixsha"
 path = "src/bin/hook.rs"
 
 [dependencies]
 anyhow = "1.0.100"
+
+[dev-dependencies]
+tempfile = "3.14"

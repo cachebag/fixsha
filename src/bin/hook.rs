@@ -3,7 +3,7 @@
 // It works for nmrs, and probably for other projects I can't gurantee that.
 
 use anyhow::Error;
-use fns::{build_nix_derivation, parse_and_replace_hash};
+use fixsha::{build_nix_derivation, parse_and_replace_hash};
 use std::path::Path;
 
 fn main() -> Result<(), Error> {
