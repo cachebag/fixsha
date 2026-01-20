@@ -18,5 +18,26 @@ This assumes that your projects root has a `default.nix` and `package.nix`:
 ```bash
 fixsha
 ```
+
+## Git Hook
+
+To automatically fix hashes before committing, paste this into `.git/hooks/pre-commit`:
+
+```bash
+#!/bin/sh
+fixsha
+if [ -f package.nix ]; then
+    git add package.nix
+fi
+```
+
+Make it executable:
+
+```bash
+chmod +x .git/hooks/pre-commit
+```
+
+Now `fixsha` runs on every commit and stages any hash updates automatically.
+
 # License
 MIT OR Apache-2.0, your choice.
