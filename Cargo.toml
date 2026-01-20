@@ -2,6 +2,18 @@
 name = "fns"
 version = "0.1.0"
 edition = "2024"
+authors = ["Akrm Al-Hakimi <alhakimiakrmj@gmail.com>"]
+description = "A utility to automatically update Nix cargoHash values by building derivations and parsing the output."
+readme = "README.md"
+homepage = "https://github.com/cachebag/fixsha"
+repository = "https://github.com/cachebag/fixsha"
+license = "MIT OR Apache-2.0"
+keywords = ["nix", "cargo", "hash", "automation", "derivation"]
+categories = ["development-tools", "command-line-utilities"]
+
+[[bin]]
+name = "hook"
+path = "src/bin/hook.rs"
 
 [dependencies]
 anyhow = "1.0.100"
